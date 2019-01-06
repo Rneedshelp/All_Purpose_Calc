@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.everj.a411_app">
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="411 App Home"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".BMIActivity"
+                android:label="BMI calculator"
+                android:parentActivityName=".MainActivity"/>
+        <activity
+                android:name=".CurrencyActivity"
+                android:label="Currency Converter"
+                android:parentActivityName=".MainActivity"/>
+        <activity
+                android:name=".UnitActivity"
+                android:label="Unit Length Calculator"
+                android:parentActivityName=".MainActivity"/>
+        <activity
+                android:name=".DiscountActivity"
+                android:label="Discount Calculator"
+                android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

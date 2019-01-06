@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">411_App</string>
+    <string name="calculator_bmi">BMI converter</string>
+    <string name="calculator_unit">Unit Conversion</string>
+    <string name="calculator_money">Currency Converter</string>
+    <string name="calculator_discount">Currency Converter</string>
+
+    <string-array name="units_array">
+        <item>Select a Unit</item>
+        <item>Inch</item>
+        <item>Feet</item>
+        <item>Yards</item>
+        <item>Miles</item>
+        <item>Meters</item>
+        <item>Millimeter</item>
+        <item>Centimeter</item>
+        <item>Kilometer</item>
+    </string-array>
+    <string-array name="currency_array">
+        <item>Select a Currency</item>
+        <item>USD</item>
+        <item>JPY</item>
+        <item>GBP</item>
+        <item>CAD</item>
+        <item>AUD</item>
+        <item>EUR</item>
+    </string-array>
+    <array name="list_array">
+        <item>BMI Calculator</item>
+        <item>Unit Length Calculator</item>
+        <item>Currency Converter Calculator</item>
+        <item>Purchase Discount Calculator</item>
+    </array>
+
+
+
+</resources>
