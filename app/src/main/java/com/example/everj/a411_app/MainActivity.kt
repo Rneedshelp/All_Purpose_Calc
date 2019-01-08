@@ -1,5 +1,5 @@
 //Conversion Calculator By Richard Echeverria
-
+//Able to use 5 different calculators and more to be added as practice
 package com.example.everj.a411_app
 import android.annotation.SuppressLint
 import android.content.Intent
