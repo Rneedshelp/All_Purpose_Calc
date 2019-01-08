@@ -1,6 +1,4 @@
-//CPSC 411 APP 1
-//Richard Echeverria
-//CWID 891720195 Recheverria04@csu.fullerton.edu
+//Conversion Calculator By Richard Echeverria
 
 package com.example.everj.a411_app
 import android.annotation.SuppressLint
