@@ -1,4 +1,4 @@
-package com.example.everj.a411_app
+package com.example.everj.aAll_Purpose_calc_app
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

@@ -1,22 +1,12 @@
-package com.example.everj.a411_app
+package com.example.everj.aAll_Purpose_calc_app
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.app.ActionBar
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_bmi.*
-import kotlinx.android.synthetic.main.activity_bmi.view.*
-import kotlinx.android.synthetic.main.activity_main.*
-import org.w3c.dom.Text
-import kotlin.math.pow
+import kotlinx.android.synthetic.main.activity_degree.*
 
 class DegreeActivity : AppCompatActivity() {
 
@@ -25,13 +15,38 @@ class DegreeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_degree)
         setSupportActionBar(findViewById(R.id.app_toolbar)) //setup Actionbar in this app
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+
+        fun set_result(argf: Int, argc : Int, input : Int) {
+            fahreneit_result.text = input.toString() + " C =" + String.format("%d", argf) + " F"
+            Celcius_result.text = input.toString() + " F =" + String.format("%d", argc) + " C"
+        }
+
+        fun degreeconvert(arg : Int){
+            if(arg < 0) //If input is empty set output to 0
+            {
+                set_result(0,0,arg)
+            }
+            else{
+                val F = ((arg * 1.8) + 32).toInt()
+                val C = (arg - 32) *(5/9)
+                set_result(F,C,arg)
+
+            }
+
+        }
+
+        fun clickwatcher() {
+            val button = findViewById<Button>(R.id.button)
+            button.setOnClickListener()
+            {
+
+                degreeconvert(degree_input.text.toString().toInt())
+            }
+        }
+
+        clickwatcher()
     }
-
-
-
-
-
-
 
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean //Add toolbar to this activity too
@@ -61,6 +76,11 @@ class DegreeActivity : AppCompatActivity() {
                 intent = Intent(this,DiscountActivity::class.java)
                 startActivity(intent)
             }
+            R.id.calc_temp->{
+                intent = Intent(this,DegreeActivity::class.java)
+                startActivity(intent)
+            }
+
         }
         return super.onOptionsItemSelected(item)
     }

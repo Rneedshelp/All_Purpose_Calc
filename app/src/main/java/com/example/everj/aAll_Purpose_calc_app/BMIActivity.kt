@@ -1,21 +1,13 @@
-package com.example.everj.a411_app
+package com.example.everj.aAll_Purpose_calc_app
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.app.ActionBar
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_bmi.*
-import kotlinx.android.synthetic.main.activity_bmi.view.*
-import kotlinx.android.synthetic.main.activity_main.*
-import org.w3c.dom.Text
 import kotlin.math.pow
 
 class BMIActivity : AppCompatActivity() {
@@ -81,6 +73,10 @@ class BMIActivity : AppCompatActivity() {
             }
             R.id.calc_discount->{
                 intent = Intent(this,DiscountActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.calc_temp->{
+                intent = Intent(this,DegreeActivity::class.java)
                 startActivity(intent)
             }
         }

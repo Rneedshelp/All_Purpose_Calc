@@ -2,18 +2,13 @@
 //Able to use 5 different calculators and more to be added as practice
 
 
-package com.example.everj.a411_app
-import android.annotation.SuppressLint
+package com.example.everj.aAll_Purpose_calc_app
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Adapter
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.ListView
-import com.example.everj.a411_app.R.array.list_array
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -41,6 +36,10 @@ class MainActivity : AppCompatActivity() {
                 }
                 3->{
                     intent = Intent(this,DiscountActivity::class.java)
+                    startActivity(intent)
+                }
+                4->{
+                    intent = Intent(this,DegreeActivity::class.java)
                     startActivity(intent)
                 }
             }
@@ -73,6 +72,10 @@ class MainActivity : AppCompatActivity() {
                  intent = Intent(this,DiscountActivity::class.java)
                  startActivity(intent)
              }
+             R.id.calc_temp->{
+             intent = Intent(this,DegreeActivity::class.java)
+             startActivity(intent)
+            }
          }
 
         return super.onOptionsItemSelected(item)

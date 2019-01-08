@@ -1,9 +1,11 @@
 <resources>
-    <string name="app_name">411_App</string>
+    <string name="app_name">All Purpose Calculator</string>
     <string name="calculator_bmi">BMI converter</string>
     <string name="calculator_unit">Unit Conversion</string>
     <string name="calculator_money">Currency Converter</string>
     <string name="calculator_discount">Currency Converter</string>
+    <string name="calculator_temperature">Currency Converter</string>
+
 
     <string-array name="units_array">
         <item>Select a Unit</item>
@@ -30,6 +32,7 @@
         <item>Unit Length Calculator</item>
         <item>Currency Converter Calculator</item>
         <item>Purchase Discount Calculator</item>
+        <item>Temperature Conversion Calculator</item>
     </array>
 
 

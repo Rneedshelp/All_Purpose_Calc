@@ -19,6 +19,11 @@
             android:title="Discount Calculator"
             app:showAsAction="never">
     </item>
+    <item
+            android:id="@+id/calc_temp"
+            android:title="Temperature Conversion Calculator"
+            app:showAsAction="never">
+    </item>
 
 
 </menu>

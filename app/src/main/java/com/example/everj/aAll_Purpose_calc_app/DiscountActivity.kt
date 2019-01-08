@@ -1,4 +1,4 @@
-package com.example.everj.a411_app
+package com.example.everj.aAll_Purpose_calc_app
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -8,9 +8,7 @@ import android.text.TextWatcher
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.EditText
-import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_discount.*
-import kotlinx.android.synthetic.main.activity_discount.view.*
 
 class DiscountActivity : AppCompatActivity()
 {
@@ -94,6 +92,10 @@ class DiscountActivity : AppCompatActivity()
             }
             R.id.calc_discount->{
                 intent = Intent(this,DiscountActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.calc_temp->{
+                intent = Intent(this,DegreeActivity::class.java)
                 startActivity(intent)
             }
         }

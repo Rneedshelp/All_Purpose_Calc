@@ -1,4 +1,4 @@
-package com.example.everj.a411_app
+package com.example.everj.aAll_Purpose_calc_app
 
 import org.junit.Test
 

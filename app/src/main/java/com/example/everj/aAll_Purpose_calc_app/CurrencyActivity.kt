@@ -1,12 +1,8 @@
-package com.example.everj.a411_app
+package com.example.everj.aAll_Purpose_calc_app
 
-import android.app.Activity
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.os.DeadObjectException
-import android.support.v4.app.SupportActivity
-import android.support.v7.app.ActionBar
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.Menu
@@ -271,6 +267,10 @@ class CurrencyActivity : AppCompatActivity()
             }
             R.id.calc_discount->{
                 intent = Intent(this,DiscountActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.calc_temp->{
+                intent = Intent(this,DegreeActivity::class.java)
                 startActivity(intent)
             }
         }
