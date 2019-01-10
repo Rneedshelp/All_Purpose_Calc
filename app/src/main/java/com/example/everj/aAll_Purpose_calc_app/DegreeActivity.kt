@@ -17,22 +17,16 @@ class DegreeActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
 
-        fun set_result(argf: Int, argc : Int, input : Int) {
-            fahreneit_result.text = input.toString() + " C =" + String.format("%d", argf) + " F"
-            Celcius_result.text = input.toString() + " F =" + String.format("%d", argc) + " C"
+        fun set_result(argf: Double, argc : Double, input : Int) {
+            fahreneit_result.text = String.format("%d", input)  + "° Celcius = " + String.format("%.1f°", argf) + " Fahrenheit"
+            Celcius_result.text =   String.format("%d", input)  + "° Fahrenheit = " + String.format("%.1f°", argc) + " Celcius"
         }
 
         fun degreeconvert(arg : Int){
-            if(arg < 0) //If input is empty set output to 0
-            {
-                set_result(0,0,arg)
-            }
-            else{
-                val F = ((arg * 1.8) + 32).toInt()
-                val C = (arg - 32) *(5/9)
-                set_result(F,C,arg)
 
-            }
+                val F = ((arg * 1.8) + 32)
+                val C =  (arg - 32) * 0.555555
+                set_result(F,C,arg)
 
         }
 
@@ -40,8 +34,13 @@ class DegreeActivity : AppCompatActivity() {
             val button = findViewById<Button>(R.id.button)
             button.setOnClickListener()
             {
-
-                degreeconvert(degree_input.text.toString().toInt())
+                if(degree_input.text.isEmpty()) //If input is empty set output to 0
+                {
+                    degreeconvert(0)
+                }
+                else {
+                    degreeconvert(degree_input.text.toString().toInt())
+                }
             }
         }
 
